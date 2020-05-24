@@ -2,15 +2,20 @@
 {
     public class Car
     {
-        public string Manufactorer { get; }
-        public string Model { get; }
-
-        public Car(string manufactorer, string model)
+        public Car(string manufactorer, string brand, string model)
         {
             Manufactorer = manufactorer;
+            Brand = brand;
             Model = model;
         }
 
-        public override string ToString() => $"{Model}, made by: {Manufactorer}";
+        public string Manufactorer { get; }
+        public string Brand { get; }
+        public string Model { get; }
+
+        public override string ToString()
+        {
+            return $"{Model}, made by: {Manufactorer}";
+        }
     }
 }
