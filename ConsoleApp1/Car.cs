@@ -1,6 +1,8 @@
-﻿namespace ConsoleApp1
+﻿using System;
+
+namespace ConsoleApp1
 {
-    public class Car
+    public class Car : IRidable
     {
         public Car(string manufactorer, string brand, string model)
         {
@@ -12,6 +14,16 @@
         public string Manufactorer { get; }
         public string Brand { get; }
         public string Model { get; }
+
+        public double Milage()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetFuelType()
+        {
+            throw new NotImplementedException();
+        }
 
         public override string ToString()
         {
